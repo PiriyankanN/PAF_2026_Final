@@ -1,3 +1,5 @@
+# PAF_2026_Final
+=======
 # Smart Campus Operations Hub 🚀
 
 A professional-grade, full-stack management platform for academic campuses. This system streamlines resource booking, maintenance tracking, and administrative oversight with a modern, high-performance architecture.
@@ -67,3 +69,4 @@ For system logs and audit trails, navigate to the **System Logs** module in the 
 
 ---
 *Built for the Smart Campus Ecosystem.*
+>>>>>>> main
