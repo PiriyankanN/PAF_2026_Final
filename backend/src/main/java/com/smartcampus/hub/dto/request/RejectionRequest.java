@@ -1,8 +1,8 @@
-package com.smartcampus.hub.dto.request;
+// package com.smartcampus.hub.dto.request;
 
-import lombok.Data;
+// import lombok.Data;
 
-@Data
-public class RejectionRequest {
-    private String reason;
-}
+// @Data
+// public class RejectionRequest {
+//     private String reason;
+// }

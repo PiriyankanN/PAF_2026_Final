@@ -1,5 +1,5 @@
-package com.smartcampus.hub.service;
+// package com.smartcampus.hub.service;
 
-public interface EmailService {
-    void sendEmail(String to, String subject, String body);
-}
+// public interface EmailService {
+//     void sendEmail(String to, String subject, String body);
+// }

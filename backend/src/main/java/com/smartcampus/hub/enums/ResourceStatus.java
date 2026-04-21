@@ -1,6 +1,6 @@
-package com.smartcampus.hub.enums;
+// package com.smartcampus.hub.enums;
 
-public enum ResourceStatus {
-    ACTIVE,
-    OUT_OF_SERVICE
-}
+// public enum ResourceStatus {
+//     ACTIVE,
+//     OUT_OF_SERVICE
+// }

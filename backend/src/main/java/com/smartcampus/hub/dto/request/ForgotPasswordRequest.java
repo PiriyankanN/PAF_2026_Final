@@ -1,13 +1,13 @@
-package com.smartcampus.hub.dto.request;
+// package com.smartcampus.hub.dto.request;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import lombok.Data;
+// import jakarta.validation.constraints.Email;
+// import jakarta.validation.constraints.NotBlank;
+// import lombok.Data;
 
-@Data
-public class ForgotPasswordRequest {
+// @Data
+// public class ForgotPasswordRequest {
 
-    @NotBlank(message = "Email is required")
-    @Email(message = "Email format is invalid")
-    private String email;
-}
+//     @NotBlank(message = "Email is required")
+//     @Email(message = "Email format is invalid")
+//     private String email;
+// }

@@ -1,12 +1,12 @@
-package com.smartcampus.hub.dto.request;
+// package com.smartcampus.hub.dto.request;
 
-import com.smartcampus.hub.enums.AccountStatus;
-import jakarta.validation.constraints.NotNull;
-import lombok.Data;
+// import com.smartcampus.hub.enums.AccountStatus;
+// import jakarta.validation.constraints.NotNull;
+// import lombok.Data;
 
-@Data
-public class UpdateUserStatusRequest {
+// @Data
+// public class UpdateUserStatusRequest {
 
-    @NotNull(message = "Status is required")
-    private AccountStatus status;
-}
+//     @NotNull(message = "Status is required")
+//     private AccountStatus status;
+// }
