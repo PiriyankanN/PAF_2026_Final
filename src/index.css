@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --primary: 220 100% 50%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 260 100% 60%;
+  --background: 220 33% 98%;
+  --foreground: 220 40% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 40% 10%;
+  --border: 220 20% 90%;
+  --ring: 220 100% 50%;
+  
+  --radius-organic: 2rem 1rem 2rem 1rem;
+  --radius-blob: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.dark {
+  --background: 220 40% 5%;
+  --foreground: 220 20% 95%;
+  --card: 220 40% 8%;
+  --card-foreground: 220 20% 95%;
+  --border: 220 30% 15%;
+}
+
+/* Global Transitions */
+@layer base {
+  * {
+    @apply transition-colors duration-300;
+  }
+  
+  body {
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))] antialiased selection:bg-blue-500/30;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  button {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  button:active {
+    transform: scale(0.96);
+  }
+}
+
+/* Premium Design Components */
+@layer components {
+  .glass-card {
+    @apply bg-white/60 dark:bg-black/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+    border-radius: var(--radius-organic);
+  }
+
+  .glass-card-hover {
+    @apply hover:shadow-[0_20px_50px_rgba(59,130,246,0.15)] hover:border-blue-400/50 dark:hover:border-blue-500/30 transition-all duration-500 hover:-translate-y-1;
+  }
+
+  .organic-button {
+    @apply px-6 py-3 bg-gradient-to-br from-blue-600 to-indigo-700 text-white font-bold shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300;
+    border-radius: 1rem 0.5rem 1rem 0.5rem;
+  }
+
+  .modern-input {
+    @apply bg-white/50 dark:bg-white/5 border border-transparent focus:border-blue-500/50 dark:focus:border-blue-400/50 rounded-2xl px-5 py-3.5 outline-none transition-all duration-300 shadow-inner;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400;
+  }
+
+  /* Pinterest Style 3D Cards */
+  .pop-card {
+    @apply relative w-72 h-80 flex flex-col items-center justify-end p-6 transition-all duration-500;
+  }
+
+  .pop-card-bg {
+    @apply absolute inset-x-0 bottom-0 h-4/5 rounded-[2.5rem] shadow-2xl transition-all duration-500 overflow-hidden;
+  }
+
+  .pop-card-img {
+    @apply absolute top-0 w-56 h-56 object-contain transition-all duration-500 z-10 drop-shadow-2xl;
+    transform: translateY(0) scale(1);
+  }
+
+  .pop-card:hover .pop-card-img {
+    transform: translateY(-40px) scale(1.1);
+  }
+
+  .pop-card:hover .pop-card-bg {
+    @apply h-full;
+  }
+
+  .horizontal-scroll {
+    @apply flex overflow-x-auto gap-12 pb-16 px-8 scroll-smooth;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .horizontal-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}
+/* Animated Backgrounds & Shapes */
+@layer utilities {
+  .bg-mesh {
+    background-color: hsl(var(--background));
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(220, 100%, 50%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(260, 100%, 50%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, hsla(220, 100%, 50%, 0.05) 0px, transparent 80%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .floating-glass {
+    @apply absolute w-64 h-64 bg-white/5 dark:bg-white/2 backdrop-blur-3xl rounded-full border border-white/10 pointer-events-none -z-10;
+  }
+
+  .animate-blob {
+    animation: blob 25s infinite linear;
+  }
+
+  .animate-float-slow {
+    animation: float 12s ease-in-out infinite;
+  }
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+  33% { transform: translate(100px, -150px) scale(1.2) rotate(120deg); }
+  66% { transform: translate(-80px, 80px) scale(0.8) rotate(240deg); }
+  100% { transform: translate(0px, 0px) scale(1) rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-500/20 hover:bg-blue-500/40 rounded-full transition-colors;
+}
+
+
