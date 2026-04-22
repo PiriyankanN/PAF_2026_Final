@@ -19,37 +19,37 @@ import java.util.List;
 @RequiredArgsConstructor
 @PreAuthorize("hasRole('ADMIN')")
 @CrossOrigin(origins = "*")
-// public class AdminBookingController {
+public class AdminBookingController {
 
-//     private final AdminBookingService adminBookingService;
+    private final AdminBookingService adminBookingService;
 
-//     @GetMapping
-//     public ResponseEntity<List<BookingResponse>> getAllBookings() {
-//         return ResponseEntity.ok(adminBookingService.getAllBookings());
-//     }
+    @GetMapping
+    public ResponseEntity<List<BookingResponse>> getAllBookings() {
+        return ResponseEntity.ok(adminBookingService.getAllBookings());
+    }
 
-//     @GetMapping("/search")
-//     public ResponseEntity<List<BookingResponse>> searchBookings(@RequestParam String query) {
-//         return ResponseEntity.ok(adminBookingService.searchBookings(query));
-//     }
+    @GetMapping("/search")
+    public ResponseEntity<List<BookingResponse>> searchBookings(@RequestParam String query) {
+        return ResponseEntity.ok(adminBookingService.searchBookings(query));
+    }
 
-//     @GetMapping("/filter")
-//     public ResponseEntity<List<BookingResponse>> filterBookings(
-//             @RequestParam(required = false) BookingStatus status,
-//             @RequestParam(required = false) Long resourceId,
-//             @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date,
-//             @RequestParam(required = false) String userEmail,
-//             @RequestParam(required = false) String userName) {
-//         return ResponseEntity.ok(adminBookingService.filterBookings(status, resourceId, date, userEmail, userName));
-//     }
+    @GetMapping("/filter")
+    public ResponseEntity<List<BookingResponse>> filterBookings(
+            @RequestParam(required = false) BookingStatus status,
+            @RequestParam(required = false) Long resourceId,
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date,
+            @RequestParam(required = false) String userEmail,
+            @RequestParam(required = false) String userName) {
+        return ResponseEntity.ok(adminBookingService.filterBookings(status, resourceId, date, userEmail, userName));
+    }
 
-//     @PutMapping("/{id}/approve")
-//     public ResponseEntity<BookingResponse> approveBooking(@PathVariable Long id) {
-//         return ResponseEntity.ok(adminBookingService.approveBooking(id));
-//     }
+    @PutMapping("/{id}/approve")
+    public ResponseEntity<BookingResponse> approveBooking(@PathVariable Long id) {
+        return ResponseEntity.ok(adminBookingService.approveBooking(id));
+    }
 
-//     @PutMapping("/{id}/reject")
-//     public ResponseEntity<BookingResponse> rejectBooking(@PathVariable Long id, @Valid @RequestBody RejectionRequest request) {
-//         return ResponseEntity.ok(adminBookingService.rejectBooking(id, request.getReason()));
-//     }
-// }
+    @PutMapping("/{id}/reject")
+    public ResponseEntity<BookingResponse> rejectBooking(@PathVariable Long id, @Valid @RequestBody RejectionRequest request) {
+        return ResponseEntity.ok(adminBookingService.rejectBooking(id, request.getReason()));
+    }
+}
