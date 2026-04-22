@@ -1,24 +1,24 @@
-// package com.smartcampus.hub.controller;
+package com.smartcampus.hub.controller;
 
-// import com.smartcampus.hub.dto.request.RejectionRequest;
-// import com.smartcampus.hub.dto.response.BookingResponse;
-// import com.smartcampus.hub.enums.BookingStatus;
-// import com.smartcampus.hub.service.AdminBookingService;
-// import jakarta.validation.Valid;
-// import lombok.RequiredArgsConstructor;
-// import org.springframework.format.annotation.DateTimeFormat;
-// import org.springframework.http.ResponseEntity;
-// import org.springframework.security.access.prepost.PreAuthorize;
-// import org.springframework.web.bind.annotation.*;
+import com.smartcampus.hub.dto.request.RejectionRequest;
+import com.smartcampus.hub.dto.response.BookingResponse;
+import com.smartcampus.hub.enums.BookingStatus;
+import com.smartcampus.hub.service.AdminBookingService;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
 
-// import java.time.LocalDate;
-// import java.util.List;
+import java.time.LocalDate;
+import java.util.List;
 
-// @RestController
-// @RequestMapping("/api/admin/bookings")
-// @RequiredArgsConstructor
-// @PreAuthorize("hasRole('ADMIN')")
-// @CrossOrigin(origins = "*")
+@RestController
+@RequestMapping("/api/admin/bookings")
+@RequiredArgsConstructor
+@PreAuthorize("hasRole('ADMIN')")
+@CrossOrigin(origins = "*")
 // public class AdminBookingController {
 
 //     private final AdminBookingService adminBookingService;
