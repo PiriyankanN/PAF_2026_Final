@@ -16,37 +16,37 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/v1/admin/logs")
 @RequiredArgsConstructor
 @PreAuthorize("hasRole('ADMIN')")
-// public class ActivityLogController {
+public class ActivityLogController {
 
-//     private final ActivityLogService activityLogService;
+    private final ActivityLogService activityLogService;
 
-//     @GetMapping
-//     public ResponseEntity<List<ActivityLogResponse>> getAllLogs() {
-//         List<ActivityLogResponse> logs = activityLogService.getAllLogs().stream()
-//                 .map(this::mapToResponse)
-//                 .collect(Collectors.toList());
-//         return ResponseEntity.ok(logs);
-//     }
+    @GetMapping
+    public ResponseEntity<List<ActivityLogResponse>> getAllLogs() {
+        List<ActivityLogResponse> logs = activityLogService.getAllLogs().stream()
+                .map(this::mapToResponse)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(logs);
+    }
 
-//     private ActivityLogResponse mapToResponse(ActivityLog log) {
-//         return ActivityLogResponse.builder()
-//                 .id(log.getId())
-//                 .userName(log.getUser() != null ? log.getUser().getFullName() : "System")
-//                 .userEmail(log.getUser() != null ? log.getUser().getEmail() : "N/A")
-//                 .action(log.getAction())
-//                 .details(log.getDetails())
-//                 .timestamp(log.getTimestamp())
-//                 .build();
-//     }
+    private ActivityLogResponse mapToResponse(ActivityLog log) {
+        return ActivityLogResponse.builder()
+                .id(log.getId())
+                .userName(log.getUser() != null ? log.getUser().getFullName() : "System")
+                .userEmail(log.getUser() != null ? log.getUser().getEmail() : "N/A")
+                .action(log.getAction())
+                .details(log.getDetails())
+                .timestamp(log.getTimestamp())
+                .build();
+    }
 
-//     @lombok.Data
-//     @lombok.Builder
-//     public static class ActivityLogResponse {
-//         private Long id;
-//         private String userName;
-//         private String userEmail;
-//         private String action;
-//         private String details;
-//         private java.time.LocalDateTime timestamp;
-//     }
-// }
+    @lombok.Data
+    @lombok.Builder
+    public static class ActivityLogResponse {
+        private Long id;
+        private String userName;
+        private String userEmail;
+        private String action;
+        private String details;
+        private java.time.LocalDateTime timestamp;
+    }
+}
