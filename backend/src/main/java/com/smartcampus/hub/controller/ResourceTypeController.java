@@ -1,29 +1,29 @@
-// package com.smartcampus.hub.controller;
+ package com.smartcampus.hub.controller;
 
-// import com.smartcampus.hub.entity.ResourceType;
-// import com.smartcampus.hub.service.ResourceTypeService;
-// import org.springframework.http.HttpStatus;
-// import org.springframework.http.ResponseEntity;
-// import org.springframework.security.access.prepost.PreAuthorize;
-// import org.springframework.web.bind.annotation.*;
+ import com.smartcampus.hub.entity.ResourceType;
+ import com.smartcampus.hub.service.ResourceTypeService;
+ import org.springframework.http.HttpStatus;
+ import org.springframework.http.ResponseEntity;
+ import org.springframework.security.access.prepost.PreAuthorize;
+ import org.springframework.web.bind.annotation.*;
 
-// import java.util.List;
-// import java.util.Map;
+ import java.util.List;
+ import java.util.Map;
 
-// @RestController
-// @RequestMapping("/api/v1/resource-types")
-// public class ResourceTypeController {
+ @RestController
+ @RequestMapping("/api/v1/resource-types")
+ public class ResourceTypeController {
 
-//     private final ResourceTypeService resourceTypeService;
+     private final ResourceTypeService resourceTypeService;
 
-//     public ResourceTypeController(ResourceTypeService resourceTypeService) {
-//         this.resourceTypeService = resourceTypeService;
-//     }
+     public ResourceTypeController(ResourceTypeService resourceTypeService) {
+         this.resourceTypeService = resourceTypeService;
+     }
 
-//     @GetMapping
-//     public ResponseEntity<List<ResourceType>> getAllResourceTypes() {
-//         return ResponseEntity.ok(resourceTypeService.getAllResourceTypes());
-//     }
+     @GetMapping
+     public ResponseEntity<List<ResourceType>> getAllResourceTypes() {
+         return ResponseEntity.ok(resourceTypeService.getAllResourceTypes());
+     }
 
 //     @GetMapping("/{id}")
 //     public ResponseEntity<ResourceType> getResourceTypeById(@PathVariable Long id) {
