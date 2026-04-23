@@ -24,23 +24,23 @@ package com.smartcampus.hub.controller;
     }
 
     @PostMapping(consumes = {"multipart/form-data"})
-//     public ResponseEntity<ResourceResponse> createResource(
-//             @RequestPart("resource") @Valid ResourceRequest request,
-//             @RequestPart(value = "image", required = false) MultipartFile image) {
-//         return new ResponseEntity<>(resourceService.createResource(request, image), HttpStatus.CREATED);
-//     }
+    public ResponseEntity<ResourceResponse> createResource(
+            @RequestPart("resource") @Valid ResourceRequest request,
+            @RequestPart(value = "image", required = false) MultipartFile image) {
+       return new ResponseEntity<>(resourceService.createResource(request, image), HttpStatus.CREATED);
+   }
 
-//     @PutMapping(value = "/{id}", consumes = {"multipart/form-data"})
-//     public ResponseEntity<ResourceResponse> updateResource(
-//             @PathVariable Long id,
-//             @RequestPart("resource") @Valid ResourceRequest request,
-//             @RequestPart(value = "image", required = false) MultipartFile image) {
-//         return ResponseEntity.ok(resourceService.updateResource(id, request, image));
-//     }
+     @PutMapping(value = "/{id}", consumes = {"multipart/form-data"})
+     public ResponseEntity<ResourceResponse> updateResource(
+             @PathVariable Long id,
+             @RequestPart("resource") @Valid ResourceRequest request,
+             @RequestPart(value = "image", required = false) MultipartFile image) {
+         return ResponseEntity.ok(resourceService.updateResource(id, request, image));
+     }
 
-//     @DeleteMapping("/{id}")
-//     public ResponseEntity<Map<String, String>> deleteResource(@PathVariable Long id) {
-//         resourceService.deleteResource(id);
-//         return ResponseEntity.ok(Map.of("message", "Resource deleted successfully"));
-//     }
-// }
+    @DeleteMapping("/{id}")
+     public ResponseEntity<Map<String, String>> deleteResource(@PathVariable Long id) {
+         resourceService.deleteResource(id);
+         return ResponseEntity.ok(Map.of("message", "Resource deleted successfully"));
+     }
+ }
