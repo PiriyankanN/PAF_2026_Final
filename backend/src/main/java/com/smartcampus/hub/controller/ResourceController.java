@@ -26,11 +26,11 @@
             return ResponseEntity.ok(resourceService.searchResources(keyword, type));
        }
         
-//         return ResponseEntity.ok(resourceService.getAllResources());
-//     }
+        return ResponseEntity.ok(resourceService.getAllResources());
+   }
 
-//     @GetMapping("/{id}")
-//     public ResponseEntity<ResourceResponse> getResourceById(@PathVariable Long id) {
-//         return ResponseEntity.ok(resourceService.getResourceById(id));
-//     }
-// }
+    @GetMapping("/{id}")
+     public ResponseEntity<ResourceResponse> getResourceById(@PathVariable Long id) {
+         return ResponseEntity.ok(resourceService.getResourceById(id));
+     }
+ }
