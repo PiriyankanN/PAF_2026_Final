@@ -1,23 +1,23 @@
-// package com.smartcampus.hub.dto.response;
+package com.smartcampus.hub.dto.response;
 
-// import lombok.AllArgsConstructor;
-// import lombok.Builder;
-// import lombok.Data;
-// import lombok.NoArgsConstructor;
+ import lombok.AllArgsConstructor;
+ import lombok.Builder;
+ import lombok.Data;
+ import lombok.NoArgsConstructor;
 
-// import java.util.Map;
+ import java.util.Map;
 
-// @Data
-// @NoArgsConstructor
-// @AllArgsConstructor
-// @Builder
-// public class DashboardStatsResponse {
-//     private long totalUsers;
-//     private long totalTechnicians;
-//     private long totalResources;
-//     private long activeResources;
-//     private long outOfServiceResources;
-//     private long pendingBookings;
+ @Data
+ @NoArgsConstructor
+ @AllArgsConstructor
+ @Builder
+ public class DashboardStatsResponse {
+     private long totalUsers;
+     private long totalTechnicians;
+     private long totalResources;
+     private long activeResources;
+     private long outOfServiceResources;
+     private long pendingBookings;
 //     private long openTickets;
 //     private long resolvedTickets;
 
