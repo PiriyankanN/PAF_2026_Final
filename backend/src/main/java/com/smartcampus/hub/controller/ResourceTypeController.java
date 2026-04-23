@@ -25,27 +25,27 @@
          return ResponseEntity.ok(resourceTypeService.getAllResourceTypes());
      }
 
-//     @GetMapping("/{id}")
-//     public ResponseEntity<ResourceType> getResourceTypeById(@PathVariable Long id) {
-//         return ResponseEntity.ok(resourceTypeService.getResourceTypeById(id));
-//     }
+    @GetMapping("/{id}")
+     public ResponseEntity<ResourceType> getResourceTypeById(@PathVariable Long id) {
+         return ResponseEntity.ok(resourceTypeService.getResourceTypeById(id));
+     }
 
-//     @PostMapping
-//     @PreAuthorize("hasRole('ADMIN')")
-//     public ResponseEntity<ResourceType> createResourceType(@RequestBody ResourceType resourceType) {
-//         return new ResponseEntity<>(resourceTypeService.createResourceType(resourceType), HttpStatus.CREATED);
-//     }
+     @PostMapping
+     @PreAuthorize("hasRole('ADMIN')")
+     public ResponseEntity<ResourceType> createResourceType(@RequestBody ResourceType resourceType) {
+         return new ResponseEntity<>(resourceTypeService.createResourceType(resourceType), HttpStatus.CREATED);
+     }
 
-//     @PutMapping("/{id}")
-//     @PreAuthorize("hasRole('ADMIN')")
-//     public ResponseEntity<ResourceType> updateResourceType(@PathVariable Long id, @RequestBody ResourceType resourceType) {
-//         return ResponseEntity.ok(resourceTypeService.updateResourceType(id, resourceType));
-//     }
+   @PutMapping("/{id}")
+     @PreAuthorize("hasRole('ADMIN')")
+     public ResponseEntity<ResourceType> updateResourceType(@PathVariable Long id, @RequestBody ResourceType resourceType) {
+         return ResponseEntity.ok(resourceTypeService.updateResourceType(id, resourceType));
+     }
 
-//     @DeleteMapping("/{id}")
-//     @PreAuthorize("hasRole('ADMIN')")
-//     public ResponseEntity<Map<String, String>> deleteResourceType(@PathVariable Long id) {
-//         resourceTypeService.deleteResourceType(id);
-//         return ResponseEntity.ok(Map.of("message", "Resource type deleted successfully"));
-//     }
-// }
+     @DeleteMapping("/{id}")
+     @PreAuthorize("hasRole('ADMIN')")
+     public ResponseEntity<Map<String, String>> deleteResourceType(@PathVariable Long id) {
+        resourceTypeService.deleteResourceType(id);
+         return ResponseEntity.ok(Map.of("message", "Resource type deleted successfully"));
+     }
+ }
