@@ -18,27 +18,27 @@ public class PasswordResetOtp {
     private Long id;
 
     @Column(nullable = false, length = 100)
-//     private String email;
+    private String email;
 
-//     @Column(nullable = false, length = 10)
-//     private String otpCode;
+    @Column(nullable = false, length = 10)
+    private String otpCode;
 
-//     @Column(nullable = false)
-//     private LocalDateTime expiresAt;
+    @Column(nullable = false)
+    private LocalDateTime expiresAt;
 
-//     @Column(nullable = false)
-//     @Builder.Default
-//     private boolean verified = false;
+    @Column(nullable = false)
+    @Builder.Default
+    private boolean verified = false;
 
-//     @Column(nullable = false)
-//     @Builder.Default
-//     private boolean used = false;
+    @Column(nullable = false)
+    @Builder.Default
+    private boolean used = false;
 
-//     @Column(name = "created_at", updatable = false)
-//     private LocalDateTime createdAt;
+    @Column(name = "created_at", updatable = false)
+    private LocalDateTime createdAt;
 
-//     @PrePersist
-//     protected void onCreate() {
-//         createdAt = LocalDateTime.now();
-//     }
-// }
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+    }
+}
