@@ -1,7 +1,7 @@
-// package com.smartcampus.hub.enums;
+package com.smartcampus.hub.enums;
 
-// public enum Role {
-//     USER,
-//     ADMIN,
-//     TECHNICIAN
-// }
+public enum Role {
+    USER,
+    ADMIN,
+    TECHNICIAN
+}
