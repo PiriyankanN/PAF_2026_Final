@@ -1,6 +1,6 @@
-// package com.smartcampus.hub.enums;
+package com.smartcampus.hub.enums;
 
-// public enum AccountStatus {
-//     ACTIVE,
-//     BLOCKED
-// }
+public enum AccountStatus {
+    ACTIVE,
+    BLOCKED
+}
