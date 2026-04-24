@@ -1,7 +1,7 @@
-// package com.smartcampus.hub.enums;
+package com.smartcampus.hub.enums;
 
-// public enum TicketPriority {
-//     LOW,
-//     MEDIUM,
-//     HIGH
-// }
+public enum TicketPriority {
+    LOW,
+    MEDIUM,
+    HIGH
+}
