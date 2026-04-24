@@ -1,6 +1,6 @@
-// package com.smartcampus.hub.enums;
+package com.smartcampus.hub.enums;
 
-// public enum AuthProvider {
-//     LOCAL,
-//     GOOGLE
-// }
+public enum AuthProvider {
+    LOCAL,
+    GOOGLE
+}
