@@ -1,23 +1,23 @@
-// package com.smartcampus.hub.entity;
+package com.smartcampus.hub.entity;
 
-// import jakarta.persistence.*;
-// import lombok.*;
+import jakarta.persistence.*;
+import lombok.*;
 
-// import java.time.LocalDateTime;
+import java.time.LocalDateTime;
 
-// @Entity
-// @Table(name = "password_reset_otp")
-// @Data
-// @NoArgsConstructor
-// @AllArgsConstructor
-// @Builder
-// public class PasswordResetOtp {
+@Entity
+@Table(name = "password_reset_otp")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class PasswordResetOtp {
 
-//     @Id
-//     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//     private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-//     @Column(nullable = false, length = 100)
+    @Column(nullable = false, length = 100)
 //     private String email;
 
 //     @Column(nullable = false, length = 10)
