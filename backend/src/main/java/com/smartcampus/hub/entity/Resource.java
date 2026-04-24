@@ -1,34 +1,34 @@
-// package com.smartcampus.hub.entity;
+package com.smartcampus.hub.entity;
 
-// import com.smartcampus.hub.enums.ResourceStatus;
-// import jakarta.persistence.*;
-// import lombok.*;
-// import org.hibernate.annotations.CreationTimestamp;
-// import org.hibernate.annotations.UpdateTimestamp;
+import com.smartcampus.hub.enums.ResourceStatus;
+import jakarta.persistence.*;
+import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
-// import java.time.LocalDateTime;
+import java.time.LocalDateTime;
 
-// @Entity
-// @Table(name = "resources")
-// @Getter
-// @Setter
-// @NoArgsConstructor
-// @AllArgsConstructor
-// @Builder
-// public class Resource {
+@Entity
+@Table(name = "resources")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Resource {
 
-//     @Id
-//     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//     private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-//     @Column(nullable = false)
-//     private String name;
+    @Column(nullable = false)
+    private String name;
 
-//     @Column(nullable = false)
-//     private String type;
+    @Column(nullable = false)
+    private String type;
 
-//     @Column(nullable = false)
-//     private Integer capacity;
+    @Column(nullable = false)
+    private Integer capacity;
 
 //     @Column(nullable = false)
 //     private String location;
